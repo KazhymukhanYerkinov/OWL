@@ -1,8 +1,9 @@
 import React from "react";
 import { Button, Htag, P, Rating, Tag } from "../components";
+import { withLayout } from "../layout/Layout";
 
 
-export default function Home(): JSX.Element {
+const Home = (): JSX.Element => {
 
   const [rating, setRating] = React.useState(4);
   
@@ -21,4 +22,6 @@ export default function Home(): JSX.Element {
 
     </React.Fragment>
   );
-}
+};
+
+export default withLayout(Home);
